@@ -25,7 +25,7 @@ func remove_occupant() -> void:
 
 func call_modifiers() -> void:
 	for child in get_children():
-		if child as CellModifier == null:
+		if not (child is CellModifier):
 			continue
 		
 		child.alert()
